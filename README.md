@@ -1,4 +1,5 @@
-SpringSecurity Oauth2.0 study 分布式令牌 demo
+SpringCloud+SpringSecurity+OAuth2+JWT+Zuul+Eureka DEMO
+分布式认证解决方案
 
 **第一步：用户登录授权**
 http://localhost:53010/uaa/oauth/authorize?response_type=code&client_id=heima_two
@@ -50,5 +51,5 @@ http://localhost:53010/uaa/oauth/token
     "client_id": "heima_two"
 }
 
-
+视频教程：
 https://www.bilibili.com/video/BV1VE411h7aL?p=47
