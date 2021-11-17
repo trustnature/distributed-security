@@ -15,6 +15,10 @@ public class TokenConfig {
 
     private String SIGNING_KEY = "uaa123";
 
+    /**
+     * InMemoryTokenStore JdbcTokenStore JwtTokenStore
+     * @return
+     */
     @Bean
     public TokenStore tokenStore() {
         //JWT令牌存储方案

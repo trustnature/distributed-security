@@ -1,6 +1,7 @@
 SpringCloud+SpringSecurity+OAuth2+JWT+Zuul+Eureka DEMO
-分布式认证解决方案
+分布式认证OAuth2.0 解决方案
 
+**授权码方式**：客户端、授权服务器、资源服务器互不信任
 **第一步：用户登录授权**
 http://localhost:53010/uaa/oauth/authorize?response_type=code&client_id=heima_two
 获取code
@@ -53,3 +54,11 @@ http://localhost:53010/uaa/oauth/token
 
 视频教程：
 https://www.bilibili.com/video/BV1VE411h7aL?p=47
+
+
+**简化方式**：第三方和授权服务器相互信任，资源拥有者同意之后，授权服务器直接以网页回调方式返回第三方 access_token
+**密码方式**：资源拥有者信任第三方，直接将用户名和密码给第三方，第三方携带clientid、clientsecret、用户名、密码向授权服务器请求token;
+**客户端方式**：第三方携带clientid、clientsecret 直接向授权服务器请求token；
+
+https://blog.kdyzm.cn/post/24
+https://projects.spring.io/spring-security-oauth/docs/oauth2.html

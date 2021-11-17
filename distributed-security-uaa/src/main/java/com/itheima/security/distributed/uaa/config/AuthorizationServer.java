@@ -51,7 +51,16 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
     @Autowired
     PasswordEncoder passwordEncoder;
 
-    //将客户端信息存储到数据库
+    /**
+     * 客户端详情服务
+     * clientId: (required) the client id.
+     * secret: (required for trusted clients) the client secret, if any.
+     * scope: The scope to which the client is limited. If scope is undefined or empty (the default) the client is not limited by scope.
+     * authorizedGrantTypes: Grant types that are authorized for the client to use. Default value is empty.
+     * authorities: Authorities that are granted to the client (regular Spring Security authorities).
+     * @param dataSource
+     * @return
+     */
     @Bean
     public ClientDetailsService clientDetailsService(DataSource dataSource) {
         ClientDetailsService clientDetailsService = new JdbcClientDetailsService(dataSource);
